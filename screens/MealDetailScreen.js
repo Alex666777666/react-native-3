@@ -24,7 +24,7 @@ const MealDetailScreen = ({ route, navigation }) => {
             title="Tap me!"
             onPress={handleButtonPressed}
             icon={"star"}
-            color="white"
+            color="black"
           />
         );
       },
@@ -70,10 +70,10 @@ const styles = StyleSheet.create({
     fontSize: 24,
     margin: 8,
     textAlign: "center",
-    color: "white",
+    color: "black",
   },
   detailText: {
-    color: "white",
+    color: "black",
   },
 
   listOuterContainer: {
