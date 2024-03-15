@@ -1,6 +1,8 @@
 import { Button, StatusBar, StyleSheet, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Provider } from "react-redux";
+import { store } from "./store/redux/store";
 
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
@@ -33,7 +35,7 @@ const DrawerNavigator = () => {
 
 export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <StatusBar style="light" />
       <FavoritesContextProvider>
         <NavigationContainer>
@@ -59,7 +61,7 @@ export default function App() {
           </Stack.Navigator>
         </NavigationContainer>
       </FavoritesContextProvider>
-    </>
+    </Provider>
   );
 }
 
